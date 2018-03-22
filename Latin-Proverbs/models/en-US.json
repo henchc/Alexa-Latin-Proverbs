@@ -1,7 +1,7 @@
 {
     "interactionModel":{
         "languageModel":{
-            "invocationName":"hello world",
+            "invocationName":"latin proverbs",
             "types":[],
             "intents":[
                 {
@@ -17,30 +17,16 @@
                   "samples": []
                 },
                 {
-                    "name":"HelloWorldIntent",
+                    "name":"latinProverbsIntent",
                     "slots":[
 
                     ],
                     "samples":[
-                        "hello",
-                        "say hello",
-                        "say hello world"
+                        "give me a latin proverb",
+                        "say a latin proverb",
+                        "tell me a latin proverb"
                     ]
                 },
-                {
-                    "name":"MyNameIsIntent",
-                    "slots":[
-                        {
-                            "name":"name",
-                            "type":"AMAZON.US_FIRST_NAME"
-                        }
-                    ],
-                    "samples":[
-                        "my name is {name}",
-                        "i am {name}",
-                        "you can call me {name}"
-                    ]
-                }
             ]
         }
     }

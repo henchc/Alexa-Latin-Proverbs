@@ -3,18 +3,18 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Sample Short Description",
+          "summary": "Randomly selects a Latin proverb from wikiquote, reads it in Latin with IPA dictated pronunciation, and reads the English translation.",
           "examplePhrases": [
-            "Alexa open hello world",
-            "Alexa tell hello world I am Jeff",
-            "Alexa tell hello world my name is Peter"
+            "Alexa open latin proverbs",
+            "Alexa give me a latin proverb",
+            "Alexa tell me a latin proverb"
           ],
           "name": "Latin-Proverbs",
-          "description": "Sample Full Description"
+          "description": "Randomly selects a Latin proverb from wikiquote, reads it in Latin with IPA dictated pronunciation, and reads the English translation."
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
+      "testingInstructions": "See above.",
       "category": "EDUCATION_AND_REFERENCE",
       "distributionCountries": []
     },
