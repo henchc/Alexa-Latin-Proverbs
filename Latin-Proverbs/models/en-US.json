@@ -24,7 +24,13 @@
                     "samples":[
                         "give me a latin proverb",
                         "say a latin proverb",
-                        "tell me a latin proverb"
+                        "tell me a latin proverb",
+                        "give me a latin saying",
+                        "say a latin saying",
+                        "tell me a latin saying",
+                        "give me a latin quote",
+                        "say a latin quote",
+                        "tell me a latin quote"
                     ]
                 }
             ]
