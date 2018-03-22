@@ -1,10 +1,13 @@
 function transIPA(latin) {
 
-    // list of phonemes to translate
-    // NOTE order matters in replace operation
-    // some simplifications are made
-    // reference: https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
-    // reference: https://developer.amazon.com/blogs/alexa/post/8ade6baf-0ac8-4611-9cb2-e2a470886634/how-to-use-phonemes-to-change-alexa-s-pronunciation
+    /**
+    * list of phonemes to translate
+    * NOTE order matters in replace operation
+    * some simplifications are made
+    * reference: https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
+    * reference: https://developer.amazon.com/blogs/alexa/post/8ade6baf-0ac8-4611-9cb2-e2a470886634/how-to-use-phonemes-to-change-alexa-s-pronunciation
+    */
+
     var phonemeList = [[new RegExp('ch', 'g'), 'kh'],
                        [new RegExp('qu', 'g'), 'kw'],
                        [new RegExp('ng', 'g'), 'ŋ'],
