@@ -29,7 +29,7 @@ var handlers = {
         this.emit(':responseReady');
     },
     'AMAZON.HelpIntent' : function() {
-        this.response.speak("You can try: 'alexa, tell me a latin proverb'");
+        this.response.speak("You can try: 'alexa, ask latin proverbs to tell me a latin proverb'");
         this.emit(':responseReady');
     },
     'AMAZON.CancelIntent' : function() {
@@ -88,7 +88,7 @@ function httpsGet(callback) {
                 latinIPA += transIPA(proverbWords[i]);
             }
 
-            latinIPA = '<prosody rate="slow">' + latinIPA + '</prosody>'
+            latinIPA = '<prosody rate="x-slow">' + latinIPA + '</prosody>'
 
             // build speak and card text
             var alexaSpeak = latinIPA + " <break time='1s'/> " + translation
@@ -134,7 +134,7 @@ function transIPA(latin) {
                        [new RegExp('m', 'g'), 'm'],
                        [new RegExp('n', 'g'), 'n'],
                        [new RegExp('p', 'g'), 'p'],
-                       [new RegExp('r', 'g'), 'ɹ'],
+                       [new RegExp('r', 'g'), 'r'],
                        [new RegExp('s', 'g'), 's'],
                        [new RegExp('t', 'g'), 't'],
                        [new RegExp('v', 'g'), 'w'],

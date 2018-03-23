@@ -5,13 +5,12 @@
         "en-US": {
           "summary": "Randomly selects a Latin proverb from wikiquote, reads it in Latin with IPA dictated pronunciation, and reads the English translation.",
           "examplePhrases": [
-            "Alexa open latin proverbs",
-            "Alexa ask latin proverbs to give me a latin proverb",
-            "Alexa ask latin proverbs to tell me a latin proverb",
-            "Alexa ask latin proverbs for a latin proverb"
+            "Alexa, open latin proverbs",
+            "Alexa, ask latin proverbs to tell me a latin proverb",
+            "Alexa, ask latin proverbs for a latin proverb"
           ],
-          "name": "Latin-Proverbs",
-          "description": "Randomly selects a Latin proverb from wikiquote, reads it in Latin with IPA dictated pronunciation, and reads the English translation. If you wish to add to the list of qutoes to be selected from, you can add to the wikiquote page for Latin proverbs."
+          "name": "Latin Proverbs",
+          "description": "Randomly selects a Latin proverb from wikiquote, reads it in Latin with IPA dictated pronunciation, and reads the English translation. If you wish to add to the list of quotes to be selected from, you can add to the wikiquote page for Latin proverbs."
         }
       },
       "isAvailableWorldwide": true,
