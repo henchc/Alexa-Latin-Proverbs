@@ -30,7 +30,10 @@
                         "tell me a latin saying",
                         "give me a latin quote",
                         "say a latin quote",
-                        "tell me a latin quote"
+                        "tell me a latin quote",
+                        "for a latin proverb",
+                        "for a latin quote",
+                        "for a latin saying"
                     ]
                 }
             ]

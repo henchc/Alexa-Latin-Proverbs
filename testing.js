@@ -41,8 +41,11 @@ function httpsGet(callback) {
                 var randomIndex = Math.floor(Math.random()*$('ul').length);
 
                 // assign proverb and translation
-                proverb = $('ul').eq(randomIndex).find('li').first().find('i').first().text()
-                var translation = $('ul').eq(randomIndex).find('li').eq(1).text()
+                var translation = $('ul').eq(randomIndex).find('li').eq(1).text();
+
+                if (translation.toLowerCase().indexOf('english') != -1 || translation.toLowerCase().indexOf('translation') != -1) {
+                    proverb = $('ul').eq(randomIndex).find('li').first().find('i').first().text();
+                }
             }
 
             // take out whatever comes before colon and the colon and space
@@ -120,9 +123,6 @@ function transIPA(latin) {
     var phonemeLatin = latin;
     for (var i = 0; i < phonemeList.length; i++) {
         phonemeLatin = phonemeLatin.replace(phonemeList[i][0], phonemeList[i][1]);
-        console.log(phonemeList[i][0])
-        console.log(phonemeLatin)
-        console.log('\n')
     }
 
     // build SSML
