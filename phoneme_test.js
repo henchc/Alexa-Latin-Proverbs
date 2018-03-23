@@ -32,7 +32,7 @@ function transIPA(latin) {
                        [new RegExp('m', 'g'), 'm'],
                        [new RegExp('n', 'g'), 'n'],
                        [new RegExp('p', 'g'), 'p'],
-                       [new RegExp('r', 'g'), 'ɹ'],
+                       [new RegExp('r', 'g'), 'r'],
                        [new RegExp('s', 'g'), 's'],
                        [new RegExp('t', 'g'), 't'],
                        [new RegExp('v', 'g'), 'w'],
@@ -48,9 +48,6 @@ function transIPA(latin) {
     var phonemeLatin = latin;
     for (var i = 0; i < phonemeList.length; i++) {
         phonemeLatin = phonemeLatin.replace(phonemeList[i][0], phonemeList[i][1]);
-        console.log(phonemeList[i][0])
-        console.log(phonemeLatin)
-        console.log('\n')
     }
 
     // build SSML

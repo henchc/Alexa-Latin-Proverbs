@@ -19,7 +19,7 @@ var handlers = {
         httpsGet((alexaSpeak, alexaCard) => {
                 console.log("sent     : request");
                 console.log("received to speak : " + alexaSpeak);
-                console.log("received for card : " + alexaCard)
+                console.log("received for card : " + alexaCard);
 
                 this.response.speak(alexaSpeak)
                              .cardRenderer(alexaCard);
@@ -86,11 +86,11 @@ function httpsGet(callback) {
             }
 
             // take out whatever comes before colon and the colon and space
-            translation = translation.substring(translation.indexOf(':') + 1).trim()
+            translation = translation.substring(translation.indexOf(':') + 1).trim();
 
             // remove punctuation and get list of words
-            var proverbNoPunc = proverb.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim()
-            var proverbWords = proverbNoPunc.split(/\s+/g)
+            var proverbNoPunc = proverb.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim();
+            var proverbWords = proverbNoPunc.split(/\s+/g);
 
             // built IPA SSML for each word
             var latinIPA = ''
@@ -98,13 +98,13 @@ function httpsGet(callback) {
                 latinIPA += transIPA(proverbWords[i]);
             }
 
-            latinIPA = '<prosody rate="x-slow">' + latinIPA + '</prosody>'
+            latinIPA = '<prosody rate="x-slow">' + latinIPA + '</prosody>';
 
             // build speak and card text
-            var alexaSpeak = latinIPA + " <break time='1s'/> " + translation
-            var alexaCard = proverb + ' \n ' + "English: " + translation
+            var alexaSpeak = latinIPA + " <break time='1s'/> " + translation;
+            var alexaCard = proverb + ' \n ' + "English: " + translation;
 
-            callback(alexaSpeak, alexaCard)
+            callback(alexaSpeak, alexaCard);
         });
     });
     req.end();
