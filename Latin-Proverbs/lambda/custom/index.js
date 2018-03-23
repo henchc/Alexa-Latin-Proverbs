@@ -12,6 +12,9 @@ exports.handler = function(event, context) {
 };
 
 var handlers = {
+    'LaunchRequest': function () {
+        this.emit('LatinProverbsIntent');
+    },
     'LatinProverbsIntent': function () {
         httpsGet((alexaSpeak, alexaCard) => {
                 console.log("sent     : request");
@@ -24,16 +27,23 @@ var handlers = {
             }
         );
     },
+    'SessionEndedRequest' : function() {
+        console.log('Session ended with reason: ' + this.event.request.reason);
+    },
     'AMAZON.StopIntent' : function() {
         this.response.speak('Bye');
         this.emit(':responseReady');
     },
     'AMAZON.HelpIntent' : function() {
-        this.response.speak("You can try: 'alexa, ask latin proverbs to tell me a latin proverb'");
+        this.response.speak("You can try: 'alexa ask latin proverbs to tell me a latin proverb'.");
         this.emit(':responseReady');
     },
     'AMAZON.CancelIntent' : function() {
         this.response.speak('Bye');
+        this.emit(':responseReady');
+    },
+    'Unhandled' : function() {
+        this.response.speak("Sorry, I didn't get that. You can try: 'alexa ask latin proverbs to tell me a latin proverb'.");
         this.emit(':responseReady');
     }
 };
